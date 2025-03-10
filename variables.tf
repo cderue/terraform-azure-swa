@@ -28,3 +28,8 @@ variable "repository_branch" {
   description = "GitHub repository branch used for deployment"
   type        = string
 }
+
+variable "repository_token" {
+  description = "GitHub repository token"
+  type        = string
+}
