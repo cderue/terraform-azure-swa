@@ -18,4 +18,5 @@ resource "azurerm_static_web_app" "web" {
   location = azurerm_resource_group.rg.location
   repository_url = var.repository_url
   repository_branch = var.repository_branch
+  repository_token = var.repository_token
 }
