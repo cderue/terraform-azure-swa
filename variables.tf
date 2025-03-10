@@ -9,6 +9,11 @@ variable "location" {
   type    = string
 }
 
+variable "env" {
+  description = "Application env"
+  type    = string
+}
+
 variable "app" {
   description = "Application that we want to deploy"
   type    = string
