@@ -12,19 +12,10 @@ resource "azurerm_resource_group" "rg" {
   tags = local.default_tags
 }
 
-resource "azurerm_static_site" "web" {
+resource "azurerm_static_web_app" "web" {
   name = var.app
   resource_group_name = azurerm_resource_group.rg.name
-  location = var.location
-}
-
-resource "azapi_update_resource" "web" {
-  type = "Microsoft.Web/staticSites@2024-04-01"
-  resource_id = azurerm_static_site.web.id
-  body = jsonencode({
-    properties = {
-      repositoryUrl = "https://github.com/cderue/hashitalks-2025"
-      branch = "main"
-    }
-  })
+  location = azurerm_resource_group.rg.location
+  repository_url = var.repository_url
+  repository_branch = var.repository_branch
 }
