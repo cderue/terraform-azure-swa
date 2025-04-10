@@ -6,15 +6,25 @@ variable "waypoint_application" {
 
 variable "location" {
   description = "Azure infrastructure region"
-  type    = string
+  type        = string
 }
 
 variable "env" {
   description = "Application env"
-  type    = string
+  type        = string
 }
 
 variable "app" {
   description = "Application that we want to deploy"
-  type    = string
+  type        = string
+}
+
+variable "repository_url" {
+  description = "GitHub repository used for deployment"
+  type        = string
+}
+
+variable "repository_branch" {
+  description = "GitHub repository branch used for deployment"
+  type        = string
 }
