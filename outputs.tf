@@ -1,3 +1,3 @@
-output "azurerm_container_app_url" {
-  value = azurerm_container_app.ca.latest_revision_fqdn
+output "azurerm_static_site_url" {
+  value = azurerm_static_site.web.default_host_name
 }
