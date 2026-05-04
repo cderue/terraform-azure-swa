@@ -1,0 +1,13 @@
+location            = "westeurope"
+env                 = "prod"
+app                 = "production-static-web-app"
+resource_group_name = "rg-production-static-web-app-prod"
+repository_url      = "https://github.com/example/frontend-app"
+repository_branch   = "main"
+repository_token    = "replace-me"
+
+tags = {
+  cost_center = "web-platform"
+  criticality = "high"
+  owner       = "platform-team"
+}

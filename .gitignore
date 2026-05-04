@@ -31,6 +31,16 @@ override.tf.json
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
+*tfplan*
+*.tfplan
+
+# Terraform dependency lock file can be regenerated per environment
+.terraform.lock.hcl
+
+# IDE and OS artifacts
+.DS_Store
+.idea/
+.vscode/
 
 # Ignore CLI configuration files
 .terraformrc
